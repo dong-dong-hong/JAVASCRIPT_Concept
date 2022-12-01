@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="클릭이벤트.js"></script>
+        <style>
+            li{
+                display: inline;
+                border: 1px dotted gray;
+                padding: 0 20px;
+            }
+            a{
+                text-decoration: none;
+                color: gray;
+            }
+            #result{
+                border: 1px solid black;
+                width: 200px;
+                height: 200px;
+                border-radius: 20px;
+                position: relative;
+                left: 80px;
+            }
+        </style>
+</head>
+<body>
+
+    <!-- <li><a href="#"  onclick= "alert('버튼을 클릭했습니다.')">Green</a></li>
+    <li><a href="#"  onclick= "alert('버튼을 클릭했습니다.')">orange</a></li>
+    <li><a href="#"  onclick= "alert('버튼을 클릭했습니다.')">purple</a></li> -->
+
+        <ul>
+            <li><a href="#"  onclick= "changeBg('green')">Green</a></li>
+            <li><a href="#"  onclick= "changeBg('blue')">blue</a></li>
+            <li><a href="#"  onclick= "changeBg('red')">red</a></li>
+        </ul>
+        <div id="result"></div>
+
+      
+</body>
+</html>
