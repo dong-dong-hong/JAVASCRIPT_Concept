@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 클릭이벤트</title>
+    <script src="클릭이벤트사진.js"></script>
+    <link rel="stylesheet" href="클릭이벤트사진.css">
+</head>
+<body>
+    <div class="display">
+        <img src="images/이미지1.jpg" alt="">
+        <button class="over" id="open" onclick="showDetail()"> 자세한 내용 보기 </button>
+        <div id="desc" class="detail">
+            <h4>사진의 설명</h4>
+            <p>사진에 대한 설명을 넣는 부분</p>
+            <button id="close" onclick="hideDetail()">내용 닫기</button>
+        </div>
+    </div>
+</body>
+</html>
