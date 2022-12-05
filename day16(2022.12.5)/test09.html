@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지를 클릭하면 알림 창 표시하기</title>
+</head>
+<body>
+    <img src="images/images4.webp" id="pic">
+    <script>
+        let $pic = document.querySelector("#pic"); //id=pic요소를 가져온다.
+        pic.onclick = changePic; // pic를 클릭하면 changePic함수를 실행
+                                 // ()를 추가하지 않는다.
+
+        function changePic() {
+           pic.src = "images/images1.jpg"; //pic요소의 경로를 다른 이미 경로로 바꿈
+        }
+    </script>
+</body>
+</html>
