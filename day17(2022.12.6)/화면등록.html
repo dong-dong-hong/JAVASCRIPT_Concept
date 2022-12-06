@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 등록 registor</title>
+    <script src="화면등록.js"></script>
+    <style>
+        h2{
+            background-color: lightpink;
+            padding: 15px;
+        }
+        form{
+            width: 300px;
+            height: 100px;
+            border: 1px solid gray;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2> 화면등록 </h2>
+    <div id="display"></div>
+
+    <form action="" method="get" name="myform">
+        상품명 : <input type="text" name="title" id="title"> <br>
+        상품가격 : <input type="text" name="pay" id="pay"> <br>
+        <input type= "button" onclick= "myCheck()" value= "데이터등록">
+        <input type= "reset"  onclick= "myClear()" value= "입력취소">
+    </form>
+
+    <!-- <script>
+        function myCheck() {
+            let myt = document.myform.title.value;
+            if(myt == "" || myt == null) {
+                alert('상품명 데이터 공백입니다.\n 정확하게 입력해주세요.');
+                document.myform.title.focus(); // 입력란에 초점
+                return; // 아래문장 처리하지 않고 함수 탈출 return false;라고 쓴다.
+            }else{
+                document.myform.pay.focus();
+            }            
+     
+            let myp = document.myform.pay.value;
+            if(myp == ""|| myp == null) {
+                alert('가격 데이터 공백입니다.\n 정확한 데이터를 입력해주세요.');
+                document.myform.pay.focus();
+                return false;
+            } else{
+                if( size < 3 || size > 5) {
+                    alert("자릿수는 3~5자릿수 적절합니다.");
+                    myform.pay.value = " "; //데이터 삭제 //myp
+                    myform.pay.focus();
+
+                }
+            }
+            // 😊3~5자리가 적절합니다.
+
+            let message = '상품명 데이터: ' + myt + " 상품 가격 데이터:" + myp;
+            document.getElementById('display').innerHTML= '<h2>' + message + '</h2>';
+        }
+
+        // 기본 reset 버튼이 초기화 제공
+        function myClear() {
+            document.getElementById('display').innerHTML='';
+        }
+
+        function myNumberCheck() {
+            size = myform.pay.value.length;
+            myp=myform.pay.value;
+            alert(myp + ' 문자열 길이 ' + size);
+            // 문자열 길이 3~5제한
+
+            document.getElementById('display').innerHTML= myp+ ' ' + size;
+        }
+    </script> -->
+</body>
+</html>

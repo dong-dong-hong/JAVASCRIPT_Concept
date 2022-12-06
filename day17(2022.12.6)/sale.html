@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="sale.js"></script>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <img src="https://nebula.org/blog/wp-content/uploads/2020/04/ancestry-sale.png" alt="">
+        <ul>
+            <li>
+                <label for="oPrice">원래가격</label>
+                <input type="text" id="oprice">원<!-- id는 JS에서 사용 -->
+            </li>
+        
+            <li>
+                <label for="rate">할인율</label>
+                <input type="text" name="" id="rate">%
+            </li>
+            <li>
+                <button onclick="showPrice()">할인 가격 계산하기</button>
+            </li>
+        </ul>
+    </div>
+    <div class="showResult"></div>
+    <!-- 결과창 -->
+    <!-- <script>
+        function showPrice() {
+            let $originPrice = document.querySelector('#oPrice').value; // 원래 가격
+            console.log($originPrice);
+            let $rate  = document.getElementById('rate').value; // 할인율
+            let savedPrice = $originPrice * ($rate/ 100);// 할인금액
+            let resultPrice = $originPrice - savedPrice; // 최종가격(원래가격 - 할인금액)
+            document.querySelector('.showResult').innerHTML = "상품의 원래 가격은 " + $originPrice + "원이고, 할인율은 " 
+            + $rate + "입니다.<br>" + savedPrice + "원을 절약한 " + resultPrice + "원에 살 수 있습니다."
+        }
+    </script> -->
+</body>
+</html>

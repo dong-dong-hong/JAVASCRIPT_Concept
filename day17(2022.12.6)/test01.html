@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test01.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            background-color: blueviolet;
+            padding: 12px 0;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+        a:hover{
+            background-color: yellowgreen;
+            border-radius: 4px;
+        }
+        @media screen and (max-width:768px) {
+            .memu{
+                display: none;
+            }
+            /*  */
+            .memu.active{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+
+        <ul class="memu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <ul class="icons">
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+            <li><a href="#" class="toggleBtn"><i class="fa-solid fa-align-right"></i></a></li>
+        </ul>
+    </nav>
+    <!-- <script>
+        const $toggleBtn = document.querySelector(".toggleBtn");
+        const $memu = document.querySelector(".memu");
+
+        $toggleBtn.addEventListener("click", ()=>{
+            $memu.classList.toggle("active");
+        })
+        // toggle : 클래스 유무를 체크해서 없으면 add, 있으면 remove를 자동으로 적용.
+    </script> -->
+</body>
+</html>
