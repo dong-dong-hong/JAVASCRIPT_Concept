@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test07.js"></script>
+    <style>
+        li{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        😁등록한 내역을 클릭시 색이 변하고 중간줄이 그어지게 만들자.<br>
+     1. 체크 표시 부분을 가져와 노드 리스트를 만든다 
+     <span class = "check"> 요소를 이용한다<br>
+     2. 노드 리스트에 있는 요소 전체를 반복하면서 click이벤트가 발생하면 실행할 함수를 연결한다.<br>
+     3. 클릭이 발생한 요소에서 글자 색상을 바꾼다.<br>
+     4. 클릭한 요소의 부모 노드에서 밑줄스타일 text-decoration; line-through로 바꾼다.
+     여기에서도 체크 표시와 텍스트가로줄을 그어야 한다.<br>
+    </pre>
+
+    <h3>만들자</h3>
+    <!-- 퀴즈! 항목에 있는 체크 마크를 누르면 목록 색이 변하는 -->
+    <h5>할 일 목록</h5>
+    <ul>
+        <li><span class="check">&check;할 일1</span></li>
+        <li><span class="check">&check;할 일2</span></li>
+        <li><span class="check">&check;할 일3</span></li>
+        <li><span class="check">&check;할 일4</span></li>
+        <li><span class="check">&check;할 일5</span></li>
+    </ul>
+
+    <script>
+        let listB = document.querySelectorAll(".check");
+
+        for(let i = 0; i <= listB.length; i++) {
+            listB[i].addEventListener("click", function() {
+                listB[i].parentNode.style.color = "#ccc";
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진 클릭하면 큰 사진 띄우기</title>
+    <script src="test10.js"></script>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li{
+            cursor: pointer;
+        }
+        #lightbox{
+            margin-left: 5%;
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="images/이미지1.webp" class="pic"></li>
+            <li><img src="images/이미지2.jpg" class="pic"></li>
+            <li><img src="images/이미지3.jpg" class="pic"></li>
+            <li><img src="images/이미지4.jpg" class="pic"></li>
+            <li><img src="images/이미지5.jpg" class="pic"></li>
+            <li><img src="images/이미지6.jpg" class="pic"></li>
+        </ul>
+
+        <div id="lightbox">
+            <img src="images/이미지1.webp" id="display">
+        </div>
+    </div>
+    <!-- <script>
+        let $myImages1 = document.querySelector('pic1');
+        let $myImages2 = document.querySelector('pic2');
+        let $myImages3 = document.querySelector('pic3');
+        let $myImages4 = document.querySelector('pic4');
+        let $myImages5 = document.querySelector('pic5');
+        let $myImages6 = document.querySelector('pic6');
+
+        $myImages1.addEventListener("click" , changePic1);
+        $myImages2.addEventListener("click" , changePic2);
+        $myImages3.addEventListener("click" , changePic3);
+        $myImages4.addEventListener("click" , changePic4);
+        $myImages5.addEventListener("click" , changePic5);
+        $myImages6.addEventListener("click" , changePic6);
+
+        function changePic1(){
+            $display.src = "images/이미지1.webp";
+        }
+        function changePic2(){
+            $display.src = "images/이미지2.jpg";
+        }
+        function changePic3(){
+            $display.src = "images/이미지3.jpg";
+        }
+        function changePic4(){
+            $display.src = "images/이미지4.jpg";
+        }
+        function changePic5(){
+            $display.src = "images/이미지5.jpg";
+        }
+        function changePic6(){
+            $display.src = "images/이미지6.jpg";
+        }
+    </script> -->
+</body>
+</html>

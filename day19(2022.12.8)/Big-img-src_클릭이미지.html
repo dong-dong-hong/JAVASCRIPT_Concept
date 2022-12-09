@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사진 클릭하면 큰 사진 띄우기</title>
+    <script src="Big-img-src_클릭이미지.js"></script>
+    <style>
+        ul{
+            display: flex;
+            list-style: none;
+        }
+        li{
+            cursor: pointer;
+        }
+        #lightbox{
+            margin-left: 5%;
+        }
+        img{
+            width: 100px;
+        }
+        #display{
+            width: 500px;
+        }
+     
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><img src="images/이미지1.webp" data-src="images/리미지1.webp" class="pic" height="67px"></li>
+            <li><img src="images/이미지2.jpg" data-src="images/리미지2.webp" class="pic"></li>
+            <li><img src="images/이미지3.jpg" data-src="images/리미지3.jpg" class="pic"></li>
+            <li><img src="images/이미지4.jpg" data-src="images/리미지4.jpg" class="pic"></li>
+            <li><img src="images/이미지5.jpg" data-src="images/리미지5.webp" class="pic"></li>
+            <li><img src="images/이미지6.jpg" data-src="images/리미지6.jpg" class="pic"></li>
+        </ul>
+
+        <div id="lightbox">
+            <img src="images/큰이미지1.jpg" id="display">
+        </div>
+    </div>
+    <!-- <script>
+       let $pics = document.getElementsByClassName("pic"); //pic한 요소 전부 가져옴
+       let $lightbox = document.getElementById("lightbox"); // div 박스 요소 가져옴
+       let $display = document.getElementById("display"); // 큰 이미지 가져옴
+
+       for(i = 0; i< $pics.length; i++) {
+        $pics[i].addEventListener("click", showDisplay); // i번째 요소 클릭시 showDisplay함수 실행
+       }
+
+       function showDisplay() {
+        let $bigLocation = this.getAttribute("data-src");// img부분의 data-src속성값을 가져옴
+        $display.setAttribute("src", $bigLocation); //이미지 경로를 수정
+        // $lightbox.style.display = "block";
+       }
+
+       //😁라이트박스를 클릭하면 감춤
+       lightbox.onclick = function() {
+        lightbox.style.display = "none";
+       }
+    </script> -->
+</body>
+</html>

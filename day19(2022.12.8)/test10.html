@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="test10.js"></script>
+    <style>
+        ul li{
+            color: gray;
+        }
+        ul li.on{
+            color: black;
+            cursor: pointer;
+        }
+        section{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #888;
+            margin: 50px;
+            position: relative;
+            perspective: 600px;   /* 원근감 */
+        }
+
+        section article{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+            color: #fff;
+            font-size: 50px;
+            opacity: 0;  /*  */
+            transform: rotateX(-180deg); /*  */
+            transition: 0.5s;
+        }
+        /* 박스 활성화 */
+        section article.on{
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+        /* 박스 순서별로 배경색 지정 */
+        section article:nth-of-type(1) {
+            background: powderblue;
+        }
+        section article:nth-of-type(2) {
+            background: orange;
+        }
+        section article:nth-of-type(3) {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul class="btns">
+        <li class="on">button1</li>
+        <li>button2</li>
+        <li>button3</li>
+    </ul>
+
+    <section>
+        <article class="on">Box1</article>
+        <article>Box2</article>
+        <article>Box3</article>
+    </section>
+
+    <!-- <script>
+        let $btns = document.querySelectorAll(".btns li");
+        let $boxs = document.querySelectorAll("section article");
+        
+        // 버튼의 개수만큼 반복하며 클릭 이벤트 연결
+        for(let i = 0; i < $btns.length; i++){
+
+            // 각 버튼을 클릭할 때마다
+            $btns[i].addEventListener("click", () => {
+                // 각 인수로 순서값과 버튼, 박스 그룹 넣어서
+                // activation 함수 호출
+                activation(i, $btns);
+                activation(i, $boxs);
+            })
+        }
+
+        // 1번째 인수로 순서값, 2번째 인수로 그룹 전달받아
+        function activation(index, list) {
+            // 인수로 받은 요소의 그룹 개수만큼 반복하며 비활성화
+            for(let el of list) {
+                el.classList.remove("on"); // 클래스 제거
+            }
+            list[index].classList.add("on"); // 클래스 생성
+        }
+
+
+
+
+    </script> -->
+</body>
+</html>

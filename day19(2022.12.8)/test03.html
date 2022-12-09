@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM에서 노드 추가.삭제하기</title>
+    <script src="test03.js"></script>
+</head>
+<body>
+    <h1>Web Programming</h1>
+    <ul id="itemList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    <p> 노드 리스트 node list 
+        새로운 노드를 만들어 추가하거나 삭제하려면 nodeList를 사용한다.
+
+        document.querySelectorAll("li")
+        현재 문서에서 li요소를 모두 가져오라는 뜻.
+    </p>
+    <div id="info">😁노드추가된 공간</div>
+
+    <!-- <script>
+        //콘솔에서 확인
+        // document.querySelectorAll("li");
+
+        let newP = document.createElement("p");
+        let txtNode = document.createTextNode("DOM을 추가해봅시다.")
+        newP.appendChild(txtNode);
+        document.getElementById("info").appendChild(newP);
+    </script> -->
+</body>
+</html>
